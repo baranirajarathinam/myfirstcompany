@@ -1,0 +1,12 @@
+<h2>Mass Website MVP</h2>
+
+<input placeholder="Name" [(ngModel)]="name">
+<input placeholder="Email" [(ngModel)]="email">
+<button (click)="save()">Save</button>
+
+<h3>Users</h3>
+<ul>
+  <li *ngFor="let u of users">
+    {{u.name}} - {{u.email}}
+  </li>
+</ul>
