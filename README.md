@@ -231,7 +231,8 @@ A clean, scalable full-stack starter template.
 MIT
 Step 0 — Prerequisites (run once locally)
 
-#any terminal in the vs code
+# Command for reference
+## any terminal in the vs code to setup the gcp coud project with local
 
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp> cd .\cloud\
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> dir
@@ -243,7 +244,7 @@ Settings from your current configuration [myfirstproj] are:
 accessibility:
   screen_reader: 'True'
 core:
-  account: baranidaran.r@gmail.com
+  account: baranitestproject@test.com
   disable_usage_reporting: 'False'
   project: able-analyst-258805
 
@@ -268,12 +269,12 @@ To use a federated user account, exit this command and sign in to the gcloud CLI
  then run this command again.
 
 Select an account:
- [1] baranidaran.r@gmail.com
+ [1] baranitestproject@test.com
  [2] Sign in with a new Google Account
  [3] Skip this step
 Please enter your numeric choice:  1
 
-You are signed in as: [baranidaran.r@gmail.com].
+You are signed in as: [baranitestproject@test.com].
 
 Pick cloud project to use: 
  [1] able-analyst-258805
@@ -297,7 +298,7 @@ https://console.developers.google.com/apis page.
 Error creating a default .boto configuration file. Please run [gsutil config -n] if you would like to create this file.
 The Google Cloud CLI is configured and ready to use!
 
-* Commands that require authentication will use baranidaran.r@gmail.com by default
+* Commands that require authentication will use baranitestproject@test.com by default
 * Commands will reference project `decoded-pivot-255606` by default
 Run `gcloud help config` to learn how to change individual settings
 
@@ -320,6 +321,8 @@ please run:
 To take a quick anonymous survey, run:
   $ gcloud survey
 
+
+## There should be a active billing account in GCP to run the cloud, make sure it is enabled.
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> gcloud services enable run.googleapis.com
 ERROR: (gcloud.services.enable) FAILED_PRECONDITION: Billing account for project '468386309267' is not open. Billing must be enabled for activation of service(s) 'run.googleapis.com,artifactregistry.googleapis.com,containerregistry.googleapis.com' to proceed.
 Help Token: AerXPhWOay8hK9kERO2aM9H3QM4H5cAfhBPqXjEFmrsLxFlVEfAHtQTk9hfmU8fpL0KmvRL2X4q_2x6jRgXYblai1WBVDRI8CanBZ0egswM2OgfQ
@@ -390,6 +393,9 @@ Help Token: AerXPhVdaQuA9xhgtHzTtlibRx2UMjH4sqpc2r-ligCoLOSfJCMJ1c8j76NWxYvzSVrB
     project: '468386309267'
     services: run.googleapis.com,artifactregistry.googleapis.com,containerregistry.googleapis.com
   reason: UREQ_PROJECT_BILLING_NOT_OPEN
+
+
+## this command is to enable to cloud run service for the code, since it is run on a empty folder it would throw the error so need to run on backend folder
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> gcloud services enable run.googleapis.com
 Operation "operations/acf.p2-468386309267-f96b5935-5b5f-41de-9bd1-bc3379220142" finished successfully.
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> gcloud services enable cloudbuild.googleapis.com
