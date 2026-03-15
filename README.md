@@ -400,3 +400,9 @@ PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> gcloud servic
 Operation "operations/acf.p2-468386309267-f96b5935-5b5f-41de-9bd1-bc3379220142" finished successfully.
 PS D:\projects\realtime-project\forms-help-gov\mass-web-mvp\cloud> gcloud services enable cloudbuild.googleapis.com
 Operation "operations/acf.p2-468386309267-90ea6bea-557c-4fcd-96cc-65dc8b6d9108" finished successfully.
+
+##  if you fix something in backend the follow below to build and deploy the backedn
+
+# make change to the necessary file
+mvn clean package
+gcloud run deploy mass-api --source . --region asia-south1 --allow-unauthenticated

@@ -31,4 +31,9 @@ export class AppComponent {
         this.loadUsers();
       });
   }
+
+  delete(id: string){
+    this.http.delete('https://mass-api-468386309267.asia-south1.run.app/api/users/' + id)
+      .subscribe(() => this.loadUsers());
+  }
 }

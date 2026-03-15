@@ -43,4 +43,9 @@ public class UserController {
         return repo.save(user);
     }
 
+    @DeleteMapping("/{id}")
+    public Mono<Void> delete(@PathVariable String id) {
+        return repo.deleteById(id);
+    }
+
 }

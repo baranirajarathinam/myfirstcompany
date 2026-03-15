@@ -8,5 +8,6 @@
 <ul>
   <li *ngFor="let u of users">
     {{u.name}} - {{u.email}}
+    <button (click)="delete(u.id)">Delete</button>
   </li>
 </ul>
